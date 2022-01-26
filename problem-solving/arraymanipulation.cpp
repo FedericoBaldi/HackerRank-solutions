@@ -12,7 +12,7 @@ long arrayManipulation(int n, vector<vector<int>> queries) {
         arr[b] -= k;
     }
     long sum = 0;
-    for(int i=0; i<=n; i++){
+    for(int i = 0; i <= n; i++){
         sum += arr[i];
         if(sum > max)
             max = sum;
