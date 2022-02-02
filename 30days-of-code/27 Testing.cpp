@@ -16,7 +16,6 @@ class TestDataUniqueValues {
         return 0;
     }
 };
-
 class TestDataExactlyTwoDifferentMinimums {
     public:
     static vector<int> get_array(void){
