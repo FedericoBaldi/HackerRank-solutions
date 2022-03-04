@@ -1,19 +1,18 @@
-// https://leetcode.com/problems/contains-duplicate
-class Solution {
-public:
-    bool containsDuplicate(vector<int>& nums) {
-        bool hasDuplicates = false;
-        map<int,int> values;
-        int index = 0;
-        while (hasDuplicates == false && index < nums.size()){
-            if(values[nums[index]] == 0){
-                values[nums[index]] = 1;
-            }
-            else{
-                hasDuplicates = true;
-            }
-            index++;
-        }
-        return hasDuplicates;
-    }
-};
+// https://www.hackerrank.com/challenges/tree-level-order-traversal
+void levelOrder(Node * root) {
+	if(root != NULL){
+		queue<Node *> nodeQueue;
+		nodeQueue.push(root);
+		while(nodeQueue.empty() != true){
+			Node * frontNode = nodeQueue.front();
+			nodeQueue.pop();
+			cout << frontNode->data << " ";
+			if(frontNode->left != NULL){
+				nodeQueue.push(frontNode->left);
+			}
+			if(frontNode->right != NULL){
+				nodeQueue.push(frontNode->right);
+			}
+		}
+	}
+}
